@@ -1,3 +1,58 @@
-p   {
-    font-style: italic;
+// Global
+
+$font-text: 'Oswald', sans-serif;
+$font-header: 'Roboto Condensed', sans-serif;
+
+$font-color-one: #fff;
+$font-color-two: #000;
+
+$transition: all 1s;
+
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-text;
+    color: $font-color-two;
+}
+
+.container {
+    max-width: 1140px; 
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 96px 0;
+    .section-title {
+        font-size: 48px;
+        margin: 0 0 72px 0;
+    }  
+}
+
+// Navigation
+
+.navigation {
+    .logo {
+        height: 50px;
+        img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        li {
+            display: inline-block;
+            line-height: 50px;
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
 }

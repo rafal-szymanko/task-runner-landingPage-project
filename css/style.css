@@ -56,10 +56,30 @@ section .section-subtitle {
   transition: 0.5s;
 }
 
+.wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.navigation {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://i.postimg.cc/C5g7zNqy/close-up-photography-of-smartphone-beside-binder-clip-1841841-1.jpg);
+  background-size: cover;
+}
+
 .navigation .logo {
   height: 50px;
-  position: absolute;
-  z-index: 2;
 }
 
 .navigation .logo img {
@@ -71,8 +91,6 @@ section .section-subtitle {
   padding: 0;
   margin: 0;
   list-style: none;
-  position: absolute;
-  z-index: 2;
 }
 
 .navigation ul li {
@@ -85,55 +103,23 @@ section .section-subtitle {
   color: #FFC045;
 }
 
-.splash {
-  background-image: url(https://i.postimg.cc/YqrPDtSB/apple-coffee-computer-desk-356056.jpg);
-  background-size: cover;
-  height: 100vh;
-  background-position: center;
-  position: relative;
-  background-attachment: fixed;
-}
-
-.splash .splash-inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  margin: 0 auto;
+.navigation .splash-inner {
+  margin: auto;
+  color: #fff;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-align: center;
       align-items: center;
-  color: #fff;
 }
 
-.splash .splash-inner h1 {
-  font-size: 5rem;
+.navigation .splash-inner .page-title {
+  font-size: 96px;
 }
 
-.splash .splash-inner h2 {
-  font-size: 3rem;
-  font-family: "Oswald", sans-serif;
-  font-style: italic;
-}
-
-.splash .splash-inner a:hover {
-  border: 2px solid #FFC045;
-  background: transparent;
-  color: #FFC045;
-}
-
-.splash:after {
-  position: absolute;
-  background: black;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  content: "";
-  opacity: 0.5;
+.navigation .splash-inner .page-subtitle {
+  font-size: 48px;
 }
 
 .services {
@@ -141,15 +127,7 @@ section .section-subtitle {
 }
 
 .services .wrapper {
-  min-height: 250px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  min-height: 300px;
 }
 
 .services .wrapper i {
@@ -161,12 +139,6 @@ section .section-subtitle {
 }
 
 .portfolio .wrapper {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
   margin: 0 0 48px 0;
 }
 
@@ -181,7 +153,94 @@ section .section-subtitle {
      object-fit: cover;
 }
 
-.portfolio .wrapper .portfolio-description {
-  margin: 0 auto;
+.portfolio .wrapper .portfolio-description p {
+  color: grey;
+  text-align: center;
+}
+
+footer {
+  margin: 0 0 20px 0;
+}
+
+footer p {
+  color: grey;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0 20px 0 0;
+}
+
+footer li .fab {
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  font-size: 20px;
+  background: #222;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+
+@media (max-width: 641px) {
+  .navigation .logo {
+    height: 40px;
+  }
+  .navigation ul li {
+    margin: 0 10px;
+  }
+  .navigation .splash-inner .page-title {
+    font-size: 48px;
+  }
+  .navigation .splash-inner .page-subtitle {
+    font-size: 24px;
+  }
+  .services .wrapper {
+    margin: 0 0 40px 0;
+  }
+}
+
+footer li {
+  padding: 0 10px 0 0;
+}
+
+footer li .fab {
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+@media (max-width: 361px) {
+  .navigation .logo {
+    height: 30px;
+  }
+  .navigation .splash-inner .page-title {
+    font-size: 32px;
+  }
+  .navigation .splash-inner .page-subtitle {
+    font-size: 24px;
+  }
+  footer li {
+    padding: 0 5px 0 0;
+  }
+  footer li .fab {
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 321px) {
+  footer li {
+    padding: 0 5px 0 0;
+  }
+  footer li .fab {
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

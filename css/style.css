@@ -9,7 +9,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   font-family: "Oswald", sans-serif;
-  color: #fff;
+  color: #000;
 }
 
 .container {
@@ -25,11 +25,20 @@ section {
 section .section-title {
   font-size: 48px;
   margin: 0 0 72px 0;
+  text-align: center;
+}
+
+section .section-subtitle {
+  margin: 0 0 36px 0;
+  text-align: center;
+  font-style: italic;
+  color: grey;
 }
 
 .btn {
   color: #fff;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .btn-one {
@@ -38,17 +47,18 @@ section .section-title {
   margin: 24px auto 0 auto;
   padding: 16px;
   border-radius: 5px;
+  border: 2px solid transparent;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   text-align: center;
-  text-decoration: none;
   cursor: pointer;
   background-color: #FFC045;
+  transition: 0.5s;
 }
 
 .navigation .logo {
   height: 50px;
-  position: fixed;
+  position: absolute;
   z-index: 2;
 }
 
@@ -71,9 +81,8 @@ section .section-title {
   margin: 0 36px;
 }
 
-.navigation ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
+.navigation ul li a:hover {
+  color: #FFC045;
 }
 
 .splash {
@@ -98,6 +107,7 @@ section .section-title {
       flex-direction: column;
   -ms-flex-align: center;
       align-items: center;
+  color: #fff;
 }
 
 .splash .splash-inner h1 {
@@ -110,6 +120,12 @@ section .section-title {
   font-style: italic;
 }
 
+.splash .splash-inner a:hover {
+  border: 2px solid #FFC045;
+  background: transparent;
+  color: #FFC045;
+}
+
 .splash:after {
   position: absolute;
   background: black;
@@ -118,5 +134,54 @@ section .section-title {
   z-index: 1;
   content: "";
   opacity: 0.5;
+}
+
+.services {
+  color: #000;
+}
+
+.services .wrapper {
+  min-height: 250px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.services .wrapper i {
+  color: #FFC045;
+  font-size: 48px;
+  border: 4px solid #FFC045;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.portfolio .wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 0 0 48px 0;
+}
+
+.portfolio .wrapper .portfolio-photo {
+  height: 250px;
+}
+
+.portfolio .wrapper .portfolio-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.portfolio .wrapper .portfolio-description {
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
